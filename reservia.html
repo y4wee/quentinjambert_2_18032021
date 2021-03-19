@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- En-tête de la page -->
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://kit.fontawesome.com/853ad8b0da.js" crossorigin="anonymous"></script>
+        <title>Reservia</title>
+    </head>
+
+    <body>
+        <!-- logo et barre nav -->
+        <header>
+            <h1 class="nav logoReservia"><img src="images/logo/Reservia.svg" alt="logo Reservia"></h1>
+            <a class="nav navHebergement navHover" href="#hebergements"><p class="ancreNav">Hébergements</p></a>
+            <a class="nav navActivites navHover" href="#activites"><p class="ancreNav">Activités</p></a>
+            <span class="nav navInscription"><a href="#"><strong>S'inscrire</strong></a></span>
+        </header>
+
+        <!-- Block recherche -->
+        <div class="recherche">
+            <div class="titreRecherche">
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+            </div>
+            <!-- Barre de recherche -->
+            <form method="post" action="traitement.php">
+                <label for="recherche"><i class="fas fa-map-marker-alt"></i></label>
+                <input class="inputRecherche" type="search" name="recherche" required>
+                <input class="boutonRecherche" type="submit" value="Rechercher">
+            </form>
+            <!-- filtres -->
+            <div class="filtre">
+                <div class="filtreLogo economique">
+                    <div class="formeLogo"><i class="fas fa-money-bill-wave"></i></div>
+                    <p>Économique</p>
+                </div>
+                <div class="filtreLogo familial">
+                    <div class="formeLogo"><i class="fas fa-child"></i></div>
+                    <p>Familial</p>
+                </div>
+                <div class="filtreLogo romantique">
+                    <div class="filtreLogo"><i class="fas fa-heart "></i></div>
+                    <p>Romantique</p>
+                </div>
+                <div class="filtreLogo animauxAutorises">
+                    <div><i class="fas fa-dog"></i></div>
+                    <p>Animaux autorisés</p>
+                </div>
+            </div>
+            <!-- info -->
+            <div class="info">
+                <div class="infoLogo"><i class="fas fa-info"></i></div>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,53 @@
+/* definition des polices */
+@font-face{
+    font-family: 'Raleway';
+    src: url('fonts/Raleway.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
+
+/* mise en place nav barre */
+header, .nav{
+    height: 112px;
+    display: flex;
+    align-items: center;
+}
+.navHebergement, .navActivites{
+    width: 11.5%;
+    justify-content: center;
+    color: black;
+}
+.navInscription{
+    width: 8%;
+    justify-content: center;
+    color:#0065fc;
+}
+.logoReservia{
+    width: 69%;
+}
+/* design des liens */
+.nav, .nav a{
+    text-decoration: none;
+}
+.navHover:hover {
+    border-top: solid #0065fc 2px;
+    margin-top: -2px;
+    color: #0065fc;
+}
+.ancreNav:visited {
+    color: black;
+}
+.navInscription a:visited {
+    color: #0065fc;
+}
+/* taille barre de recherche 420px 49px border 1px */
