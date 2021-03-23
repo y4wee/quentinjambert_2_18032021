@@ -404,7 +404,11 @@ body{
     margin: 20px 0 8px 15px;
 }
 .afficherPlus{
+    width: 100px;
     margin: 29px 0 21px 15px;
+}
+.afficherPlus:hover{
+    color: #0065fc;
 }
 /* Block des hebergements populaire */
 .populaireBlock{
@@ -450,6 +454,11 @@ body{
     flex-direction: column;
     line-height: 0.8em;
     border-radius: 18px;
+}
+.chambreLien:hover{
+    position: relative;
+    top: -2px;
+    box-shadow: 0px 3px 15px black;
 }
 .imageChambre{
     margin: 5px;
@@ -514,6 +523,11 @@ body{
     line-height: 0.8em;
     border-radius: 18px;
 }
+.populaireLien:hover{
+    position: relative;
+    top: -2px;
+    box-shadow: 0px 3px 15px black;
+}
 .imagePopulaire{
     height: 134px;
     width: 127px;
@@ -521,7 +535,6 @@ body{
     border-radius: 15px 0 0 15px;
     background-size: cover;
     background-position: center;
-    background-color: green;
 }
 .populaireLien h2{
     max-width: 170px;
