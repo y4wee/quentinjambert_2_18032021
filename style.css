@@ -5,44 +5,134 @@
     font-weight: normal;
     font-style: normal;
 }
-
 body{
-    display: flex;
-    flex-direction: column;
-    margin-top: 2px;
-    margin-left: 4%;
-    margin-right: 4%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.pageFlex{
+    margin: auto;
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 1025px) {
+    .pageFlex{
+        margin-top: 2px;
+        max-width: 1440px;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .pageFlex{
+        margin-top: 2px;
+        max-width: 768px;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+@media screen and (max-width: 600px){
+    .pageFlex{
+        min-width: 340px;
+        max-width: 375px;
+    }
 }
 
-/* mise en place nav barre */
-header, .nav{
-    height: 112px;
-    display: flex;
-    align-items: center;
+/*header/nav barre grand ecran */
+@media screen and (min-width: 1025px) {
+    header{
+        height: 122px;
+        max-width: 1440px;
+        display: flex;
+    }
+    .nav{
+        height: 112px;
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+    }
+    .navHebergement, .navActivites{
+        width: 11.5%;
+        justify-content: center;
+        color: black;
+    }
+    .navInscription{
+        width: 8%;
+        justify-content: center;
+        color:#0065fc;
+    }
+    .logoReservia{
+        width: 69%;
+        height: 122px;
+        margin: 0;
+    }
 }
-.navHebergement, .navActivites{
-    width: 11.5%;
-    justify-content: center;
-    color: black;
+/*header/nav barre tablette */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    header, .nav{
+        height: 120px;
+        display: flex;
+        align-items: center;
+    }
+    .navHebergement, .navActivites{
+        width: 27%;
+        justify-content: center;
+        color: black;
+    }
+    .navInscription{
+        width: 21%;
+        justify-content: flex-end;
+        color:#0065fc;
+    }
+    .logoReservia{
+        width: 25%;
+    }
 }
-.navInscription{
-    width: 8%;
-    justify-content: center;
-    color:#0065fc;
+/*header/nav barre mobile*/
+@media screen and (max-width: 600px) {
+    header, .nav{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    header{
+        height: 136px;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 20px;
+        margin: auto;
+    }
+    .navHebergement, .navActivites{
+        height: 50px;
+        width: 50%;
+        order: 2;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        border-bottom: solid 3px #f2f2f2;
+    }
+    .navInscription{
+        height: 86px;
+        width: 44.4%;
+        padding-right: 5.6%;
+        order: 1;
+        color:#0065fc;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .logoReservia{
+        height: 86px;
+        width: 44.4%;
+        padding-left: 5.6%;
+        margin: 0;
+        align-items: center;
+    }
 }
-.logoReservia{
-    width: 69%;
-}
-/* design des liens */
+/* effets des liens de la barre nav */
 .nav, .nav a{
     text-decoration: none;
-}
-.navHover:hover {
-    border-top: solid #0065fc 2px;
-    margin-top: -2px;
-    color: #0065fc;
 }
 .ancreNav:visited {
     color: black;
@@ -50,35 +140,61 @@ header, .nav{
 .navInscription a:visited {
     color: #0065fc;
 }
-/* block recherche */
+@media screen and (min-width: 1025px) {
+    .navHover:hover {
+        border-top: solid #0065fc 2px;
+        margin-top: -2px;
+        color: #0065fc;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .navHover:hover {
+        border-top: solid #0065fc 2px;
+        margin-top: -2px;
+        color: #0065fc;
+    }
+}
+@media screen and (max-width: 600px) {
+    .navHover:hover {
+        color: #0065fc;
+        border-color: #0065fc;
+    }
+}
+/* block recherche responsive */
 .blockRecherche{
-    height: 314px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+}
+.titreRecherche {
+    line-height: 1em;
+    margin-top: 21px;
 }
 .titreRecherche h1{
     font-size: 1.3em;
+    line-height: 1.2em;
+    margin-block-start: 0;
 }
 .titreRecherche p{
-    position: relative;
-    top: -10px;
+    margin-block-end: 0;
 }
-.titreRecherche{
-    height:60px;
+@media screen and (max-width: 600px) {
+    .blockRecherche{
+        padding-left: 5.6%;
+        padding-right: 5.6%;
+    }
 }
 /* barre de recherche */
 .barreDeRecherche{
     height: 49px;
-    width: 420px;
     display: flex;
     align-items: center;
     border: solid 1px #f2f2f2;
     border-radius: 18px;
+    margin-top: 36px;
 }
 .barreDeRecherche label{
     height: 50px;
-    width: 51px;
+    width: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,71 +205,137 @@ header, .nav{
 }
 .inputRecherche{
     height: 49px;
-    width: 235px;
     border: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 20px;
 }
+.inputRecherche:focus {
+    outline: none; /* a ne pas faire pour des raisons d'accessibilité */
+}
+/*bouton recherche grand ecran */
 .boutonRecherche{
-    height: 50px;
+    height: 51px;
     width: 134px;
-    border: none;
     border-bottom-right-radius: 17px;
     border-top-right-radius: 17px;
+    border: none;
     background-color: #0065fc;
-    font-weight: bold;
     color: white;
-    font-size: 1em
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: 'Raleway', sans-serif;
 }
-/* agencement et aperçu des filtres*/
-.filtres{
+/* bouton recherche mobile */
+.logoRecherche{
+    height: 51px;
+    width: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 17px;
+    background-color: #0065fc;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}
+@media screen and (min-width: 1025px) {
+    .barreDeRecherche{
+        width: 420px;
+    }
+    .inputRecherche{
+        width: 234px;
+    }
+    .logoRecherche{
+        display: none;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .barreDeRecherche{
+        width: 430px;
+        align-self: center;
+    }
+    .inputRecherche{
+        width: 244px;
+    }
+    .logoRecherche{
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .barreDeRecherche{
+        width: 333px;
+        align-self: center;
+    }
+    .inputRecherche{
+        width: 230px;
+    }
+    .boutonRecherche{
+        display: none;
+    }
+}
+/* agencement et aperçu des boutons filtres*/
+.filtresBlock{
     font-weight: bold;
     font-size: 1em;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 80%;
-    max-width: 940px;
+    margin-top: 23px;
 }
-.economique{
-    width: 190px;
-}
-.familial{
-    width: 148px;
-}
-.romantique{
-    width: 180px;
-}
-.animauxAutorises{
-    width: 238px;
-}
-.filtreLogo{
+.filtreBouton{
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border: solid 2px #F2F2F2;
+    border-left: none;
     border-radius: 40px;
     background-color: white;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 1em;
-    padding-left: 0;
-    padding-right: 20px;
+    padding: 0;
 }
-.filtreLogo:hover {
+.filtreBouton p{
+    margin: 13px;
+}
+.filtreP{
+    margin-right: 26px;
+}
+@media screen and (min-width: 1025px) {
+    .filtreBouton{
+        margin-right: 26px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .filtresBlock{
+        flex-wrap: wrap;
+    }
+    .filtreBouton{
+        margin-right: 11px;
+        margin-bottom: 13px;
+    }
+    .filtreP{
+        width: 100%;
+    }
+}
+/* effet des filtres en survolant */
+.filtreBouton:hover {
     border-color: #deebff;
     background-color: #deebff;
+    color: #0065fc;
     flex-direction: row-reverse;
     padding-right: 0;
-    padding-left: 20px;
 }
-.filtreLogo:focus {
+/* effet des filtres en selectionant */
+.filtreBouton:focus {
     outline: none;
     border-color: #deebff;
     background-color: #deebff;
+    color: #0065fc;
     flex-direction: row-reverse;
     padding-right: 0;
-    padding-left: 20px;
 }
 /* position et aperçu des logo filtres */
 .formeLogo{
@@ -170,11 +352,11 @@ header, .nav{
 /* infobulle */
 .infoRecherche{
     display: flex;
-    align-items: center;
 }
-.infoRecherche div{
-    height: 23px;
-    width: 23px;
+.logoInfo{
+    height: 22px;
+    width: 22px;
+    min-width: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,6 +366,16 @@ header, .nav{
     color: #0065fc;
 }
 .infoRecherche p{
-    position: relative;
-    left: 15px;
+    margin: 0 0 0 12px;
+}
+@media screen and (min-width: 601px) {
+    .infoRecherche{
+        margin-top: 36px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .infoRecherche{
+        align-items: baseline;
+        margin-top: 31px;
+    }
 }
