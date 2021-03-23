@@ -295,6 +295,8 @@ body{
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 1em;
+    text-decoration: none;
+    color: black;
     padding: 0;
 }
 .filtreBouton p{
@@ -371,6 +373,7 @@ body{
 @media screen and (min-width: 601px) {
     .infoRecherche{
         margin-top: 36px;
+        align-items: center;
     }
 }
 @media screen and (max-width: 600px) {
@@ -378,4 +381,184 @@ body{
         align-items: baseline;
         margin-top: 31px;
     }
+}
+/* Section hebergement */
+.hebergementSection{
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+.hebergementSection a{
+    text-decoration: none;
+    color: black;
+}
+/* Block des hebergements recherchés */
+.chambreBlock{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    font-size: 1em;
+}
+.chambreBlock h1{
+    margin: 20px 0 8px 15px;
+}
+.afficherPlus{
+    margin: 29px 0 21px 15px;
+}
+/* Block des hebergements populaire */
+.populaireBlock{
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    font-size: 1em;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.populaireH1 h1{
+    margin: 0;
+}
+.populaireH1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 26px 16px 8px 16px;
+}
+.fa-chart-line{
+    font-size: 1.3em;
+}
+@media screen and (min-width: 1025px) {
+    .chambreBlock{
+        background-color: #f2f2f2;
+        min-width: 560px;
+        max-width: 830px;
+        padding: 25px;
+    }
+    .populaireBlock{
+        margin-left: 5px;
+    }
+}
+/* block liste des chambres recherchées*/
+.chambreListe{
+    display: flex;
+}
+/* liens section chambres recherchées */
+.chambreLien{
+    height: 199px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    line-height: 0.8em;
+    border-radius: 18px;
+}
+.imageChambre{
+    margin: 5px;
+    border-radius: 15px 15px 0 0;
+    background-size: cover;
+    background-position: center;
+    height: 114px;
+}
+.chambreLien h2{
+    font-size: 1em;
+    margin: 12px 0 0 16px;
+}
+.chambreLien p{
+    font-size: 0.9em;
+    margin: 10px 0 0 16px;
+}
+@media screen and (min-width: 1025px) {
+    .chambreListe{
+        flex-wrap: wrap;
+    }
+    .chambreListe a{
+        margin: 15px;
+    }
+    .chambreLien{
+        width: 246px;
+    }
+    .imageChambre{
+        width: 236px;
+    }
+    .imageCannebiere{
+        background-image: url("images/hebergements/large/cannebiere_large.jpg");
+    }
+    .imagePort{
+        background-image: url("images/hebergements/large/port_large.jpg");
+    }
+    .imageMouettes{
+        background-image: url("images/hebergements/large/mouettes_large.jpg");
+    }
+    .imageMer{
+        background-image: url("images/hebergements/large/mer_large.jpg");
+    }
+    .imagePanier{
+        background-image: url("images/hebergements/large/panier_large.jpg");
+    }
+    .imageAmina{
+        background-image: url("images/hebergements/large/amina_large.jpg");
+    }
+}
+/* block liste des chambres populaires*/
+.populaireListe{
+    display: flex;
+    flex-direction: column;
+}
+/* liens section chambres populaires */
+.populaireLien{
+    width: 334px;
+    height: 144px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    line-height: 0.8em;
+    border-radius: 18px;
+}
+.imagePopulaire{
+    height: 134px;
+    width: 127px;
+    margin: 5px;
+    border-radius: 15px 0 0 15px;
+    background-size: cover;
+    background-position: center;
+    background-color: green;
+}
+.populaireLien h2{
+    max-width: 170px;
+    font-size: 1em;
+    line-height: 1.1em;
+    margin: 19px 0 0 0;
+}
+.populaireLien p{
+    font-size: 0.9em;
+    margin: 14px 0 0 0;
+}
+@media screen and (min-width: 1025px) {
+    .populaireListe a{
+        margin: 16px;
+    }
+    .imageSoleil{
+        background-image: url("images/hebergements/large/soleil_large.jpg");
+    }
+    .imageEau{
+        background-image: url("images/hebergements/large/eau_large.jpg");
+    }
+    .imageBlanc{
+        background-image: url("images/hebergements/large/blanc_large.jpg");
+    }
+}
+/* couleurs et placement des notes */
+.noteChambre{
+    margin: 10px 0 0 16px;
+    font-size: 0.7em;
+}
+.notePopulaire{
+    margin: 38px 0 0 0;
+    font-size: 0.7em;
+}
+.faBleu{
+    color: #0065fc;
+}
+.faGris{
+    color: #d9d9d9;
 }
