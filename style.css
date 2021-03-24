@@ -451,6 +451,29 @@ body{
         margin: 26px 16px 8px 16px;
     }
 }
+/* blocks chambre et populaire tablette */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .chambreBlock{
+        padding: 10px 2px;
+        margin: 10px 0;
+        background-color: #f2f2f2;
+        border-radius: 18px;
+    }
+    .chambreBlock h1{
+        margin: 0 16px 10px;
+    }
+    .afficherPlus{
+        margin: 10px 0 5px 16px;
+    }
+    .populaireBlock{
+        padding: 10px 2px;
+        margin: 10px 0;
+        border-radius: 18px;
+    }
+    .populaireH1{
+        margin: 0px 16px 10px;
+    }
+}
 /* blocks chambre et populaire mobile */
 @media screen and (max-width: 600px) {
     .chambreBlock h1{
@@ -532,16 +555,9 @@ body{
         background-image: url("images/hebergements/large/amina_large.jpg");
     }
 }
-@media screen and (max-width: 600px) {
-    .chambreListe{
-        flex-direction: column;
-    }
-    .chambreListe a{
-        margin: 6px auto;
-    }
+@media screen and (max-width: 1024px) {
     .chambreLien{
         width: 334px;
-        box-shadow: 0 0 8px #d9d9d9;
     }
     .imageChambre{
         width: 324px;
@@ -563,6 +579,27 @@ body{
     }
     .imageAmina{
         background-image: url("images/hebergements/small/amina_small.jpg");
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .chambreListe{
+        flex-direction: row;
+        overflow: scroll;
+        scroll-behavior: smooth;
+    }
+    .chambreListe a{
+        margin: 6px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .chambreListe{
+        flex-direction: column;
+    }
+    .chambreListe a{
+        margin: 6px auto;
+    }
+    .chambreLien{
+        box-shadow: 0 0 8px #d9d9d9;
     }
 }
 /* block liste des chambres populaires*/
@@ -618,10 +655,7 @@ body{
         background-image: url("images/hebergements/large/blanc_large.jpg");
     }
 }
-@media screen and (max-width: 600px) {
-    .populaireListe a{
-        margin: 6px auto;
-    }
+@media screen and (max-width: 1024px) {
     .imageSoleil{
         background-image: url("images/hebergements/small/soleil_small.jpg");
     }
@@ -630,6 +664,21 @@ body{
     }
     .imageBlanc{
         background-image: url("images/hebergements/small/blanc_small.jpg");
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .populaireListe{
+        flex-direction: row;
+        overflow: scroll;
+        scroll-behavior: smooth;
+    }
+    .populaireListe a{
+        margin: 6px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .populaireListe a{
+        margin: 6px auto;
     }
 }
 /* couleurs et placement des notes */
