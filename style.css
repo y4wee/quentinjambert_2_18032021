@@ -392,6 +392,9 @@ body{
     text-decoration: none;
     color: black;
 }
+.sectionH2{
+    display: none;
+}
 @media screen and (max-width: 1024px){
     .hebergementSection{
         flex-direction: column-reverse;
@@ -404,6 +407,9 @@ body{
     flex-direction: column;
     border-radius: 18px;
     font-size: 1em;
+}
+.chambreBlock h2{
+    font-size: 1.2em;
 }
 .afficherPlus{
     max-width: 100px;
@@ -418,16 +424,14 @@ body{
     font-size: 1em;
     background-color: #f2f2f2;
 }
-.populaireH1 h1{
-    margin: 0;
-}
-.populaireH1{
+.populaireTitle{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 1.2em;
 }
 .fa-chart-line{
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 @media screen and (min-width: 1025px) {
     .chambreBlock{
@@ -436,7 +440,7 @@ body{
         max-width: 830px;
         padding: 25px;
     }
-    .chambreBlock h1{
+    .chambreBlock h2{
         margin: 20px 0 8px 15px;
     }
     .afficherPlus{
@@ -447,7 +451,7 @@ body{
         padding: 20px;
         border-radius: 18px;
     }
-    .populaireH1{
+    .populaireTitle{
         margin: 26px 16px 8px 16px;
     }
 }
@@ -459,7 +463,7 @@ body{
         background-color: #f2f2f2;
         border-radius: 18px;
     }
-    .chambreBlock h1{
+    .chambreBlock h2{
         margin: 0 16px 10px;
     }
     .afficherPlus{
@@ -470,13 +474,13 @@ body{
         margin: 10px 0;
         border-radius: 18px;
     }
-    .populaireH1{
+    .populaireTitle{
         margin: 0px 16px 10px;
     }
 }
 /* blocks chambre et populaire mobile */
 @media screen and (max-width: 600px) {
-    .chambreBlock h1{
+    .chambreBlock h2{
         margin: 40px 20px 20px;
     }
     .afficherPlus{
@@ -486,7 +490,7 @@ body{
         padding-top: 20px;
         padding-bottom: 30px;
     }
-    .populaireH1{
+    .populaireTitle{
         margin: 20px;
     }
 }

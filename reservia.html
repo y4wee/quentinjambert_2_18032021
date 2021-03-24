@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <!-- En-tête de la page -->
         <meta charset="utf-8" />
@@ -28,7 +28,7 @@
                 <!-- Barre de recherche -->
                 <form class="barreDeRecherche" method="post" action="traitement.php">
                     <label for="recherche"><i class="fas fa-map-marker-alt"></i></label>
-                    <input class="inputRecherche" type="search" name="recherche" autocomplete="off" placeholder="Marseille, France" required>
+                    <input class="inputRecherche" id="recherche" type="search" name="recherche" autocomplete="off" placeholder="Marseille, France" required>
                     <input class="boutonRecherche" type="submit" value="Rechercher">
                     <button class="logoRecherche" type="submit"><i class="fas fa-search"></i></button>
                 </form>
@@ -61,9 +61,10 @@
 
             <!-- Section hebergement -->
             <section class="hebergementSection" id="hebergements">
+                <h2 class="sectionH2">hebergements</h2>
                 <!-- liste des hebergements -->
                 <article class="chambreBlock">
-                    <h1>Hébergements à Marseille</h1>
+                    <h2>Hébergements à Marseille</h2>
                     <!-- block lien des chambres -->
                     <div class="chambreListe">
                         <a href="#">
@@ -155,10 +156,10 @@
                 </article>
                 <!-- liste hebergements les plus populaires -->
                 <aside class="populaireBlock">
-                    <span class="populaireH1">
-                        <h1>Les plus populaires</h1>
+                    <h2 class="populaireTitle">
+                        <strong>Les plus populaires</strong>
                         <i class="fas fa-chart-line"></i>
-                    </span>
+                    </h2>
                     <!-- block lien des chambres populaires -->
                     <div class="populaireListe">
                         <a href="#">
@@ -206,6 +207,7 @@
                     </div>
                 </aside>
             </section>
+            <!-- Section activités -->
         </div>
     </body>
 </html>
