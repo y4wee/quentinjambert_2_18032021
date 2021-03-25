@@ -9,10 +9,10 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    font-family: 'Raleway', sans-serif;
 }
 .pageFlex{
     margin: auto;
-    font-family: 'Raleway', sans-serif;
     font-size: 1em;
     display: flex;
     flex-direction: column;
@@ -21,16 +21,12 @@ body{
     .pageFlex{
         margin-top: 2px;
         max-width: 1440px;
-        padding-left: 4%;
-        padding-right: 4%;
     }
 }
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     .pageFlex{
         margin-top: 2px;
         max-width: 768px;
-        padding-left: 4%;
-        padding-right: 4%;
     }
 }
 @media screen and (max-width: 600px){
@@ -44,8 +40,9 @@ body{
 @media screen and (min-width: 1025px) {
     header{
         height: 122px;
-        max-width: 1440px;
         display: flex;
+        padding-left: 4%;
+        padding-right: 4%;
     }
     .nav{
         height: 112px;
@@ -71,6 +68,10 @@ body{
 }
 /*header/nav barre tablette */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
+    header{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
     header, .nav{
         height: 120px;
         display: flex;
@@ -175,6 +176,12 @@ body{
 }
 .titreRecherche p{
     margin: 8px 0;
+}
+@media screen and (min-width: 601px) {
+    .blockRecherche{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
 }
 @media screen and (max-width: 600px) {
     .blockRecherche{
@@ -393,6 +400,12 @@ body{
 }
 .sectionH2{
     display: none;
+}
+@media screen and (min-width: 601px) {
+    .hebergementSection{
+        padding-right: 4%;
+        padding-left: 4%;
+    }
 }
 @media screen and (max-width: 1024px){
     .hebergementSection{
@@ -712,6 +725,12 @@ body{
     text-decoration: none;
     color: black;
 }
+@media screen and (min-width: 601px) {
+    .activiteSection{
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+}
 /* liste des activité et organisation des liens */
 .activiteListe{
     display: flex;
@@ -741,7 +760,6 @@ body{
 @media screen and (min-width: 1025px) {
     .activiteListe{
         max-height: 495px;
-        width: auto;
         align-content: space-between;
     }
     .activiteListe a{
@@ -796,7 +814,6 @@ body{
 @media screen and (min-width: 1025px) and (max-width: 1301px) {
     .activiteListe{
         max-height: 800px;
-        width: auto;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -858,5 +875,80 @@ body{
     .imageActivite{
         width: 334px;
         height: 135px;
+    }
+}
+/* FOOTER */
+footer{
+    margin: 0;
+    padding: 30px 0;
+    min-width: 340px;
+    background-color: #f2f2f2;
+}
+.footerFlex{
+    margin: auto;
+    display: flex;
+}
+.h2Footer{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.ulFooter{
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    line-height: 1.8em;
+}
+.footerFlex a{
+    text-decoration: none;
+    color: black;
+    font-size: 0.9em;
+}
+.footerFlex a:hover{
+    color: #0065fc;
+}
+@media screen and (min-width: 1025px) {
+    .footerFlex{
+        max-width: 1325px;
+        padding: 0 4%;
+    }
+    .aPropos{
+        width: 33%;
+    }
+    .nosHebergements{
+        width: 33%;
+    }
+    .assistance{
+        width: 33%;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .footerFlex{
+        max-width: 707px;
+        padding: 0 4%;
+    }
+    .aPropos{
+        width: 33%;
+    }
+    .nosHebergements{
+        width: 33%;
+    }
+    .assistance{
+        width: 33%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .footerFlex{
+        max-width: 375px;
+        min-width: 340px;
+        flex-direction: column;
+    }
+    .aPropos{
+        margin: 20px;
+    }
+    .nosHebergements{
+        margin: 20px;
+    }
+    .assistance{
+        margin: 15px 25px;
     }
 }
