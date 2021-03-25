@@ -613,10 +613,10 @@ body{
         flex-direction: column;
     }
     .chambreListe a{
-        margin: 6px auto;
+        margin: 11px auto;
     }
     .chambreLien{
-        box-shadow: 0 0 8px #d9d9d9;
+        box-shadow: 0 3px 10px #d9d9d9;
     }
 }
 /* block liste des chambres populaires*/
